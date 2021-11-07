@@ -57,7 +57,7 @@ app.post('/api/help', (req, res) => {
 })
 
 app.delete('/api/help/:message', (req, res) => {
-   res.status(200).send(`Message deleted. Click for 'encourage' again for a encouraging message`);
+   res.status(200).send(`Message has been deleted. Refresh page to start over again.`);
 })
 
 app.get('/api/helpInput/', (req, res) => {

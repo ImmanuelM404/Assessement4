@@ -56,15 +56,15 @@ getParamSubmit.addEventListener('click', () => {
     // let paramInput = document.getElementById('newInput').value
     // paramInput = ''
     //console.log(paramInput)
-    let paramInput2 = window.prompt('Write your own affirmation')
-    console.log(paramInput2)
+    // let paramInput2 = window.prompt('Write your own affirmation')
+    // console.log(paramInput2)
 
-    const p = document.createElement('p')
-    const t = document.createTextNode('item')
-    p.appendChild(t);
+    // const p = document.createElement('p')
+    // const t = document.createTextNode('item')
+    // p.appendChild(t);
 
-     responseArea.appendChild(p)
-     t.textContent = paramInput2
+    //  responseArea.appendChild(p)
+    //  t.textContent = paramInput2
      // take paramInput2 and send to requeest to server side 
 
     

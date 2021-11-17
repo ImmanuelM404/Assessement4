@@ -21,7 +21,7 @@ getSubmit.addEventListener('click', () => {
         meaning: 'Nothing worthy of obtaining comes easy'
        }
     axios
-        .post("http://localhost:4000/api/encourage", encourage)
+        .post("/api/encourage", encourage)    // move https:// up to endpoint, setting up endpoints
         .then(res => displayRes([res.data]))
 });
 
@@ -31,7 +31,7 @@ getInspire.addEventListener('click', () => {
         meaning: 'Your life was meant to inspire someone else to fulfill their potential'
        }
     axios
-        .post("http://localhost:4000/api/inspire", inspire)
+        .post("/api/inspire", inspire)
         .then(res => displayRes([res.data]))
 });
 
@@ -41,13 +41,13 @@ getHelp.addEventListener('click', () => {
         meaning: 'Most dreams are killed from the comfort of our bed. Act Now'
        }
     axios
-        .post("http://localhost:4000/api/help", help)
+        .post("/api/help", help)
         .then(res => displayRes([res.data]))
 });
 
 getQuerySubmit.addEventListener('click', () => {
      axios
-    .delete(`http://localhost:4000/api/help/:message`)
+    .delete(`/api/help/:message`)
     .then(res => displayRes([res.data]))
     //console.log('Hello')
 });
@@ -58,9 +58,19 @@ getParamSubmit.addEventListener('click', () => {
     //console.log(paramInput)
     let paramInput2 = window.prompt('Write your own affirmation')
     console.log(paramInput2)
-    axios
-    .get(`http://localhost:4000/api/helpInput/`)
-    .then(res => displayRes([res.data]))
+
+    const p = document.createElement('p')
+    const t = document.createTextNode('item')
+    p.appendChild(t);
+
+     responseArea.appendChild(p)
+     t.textContent = paramInput2
+     // take paramInput2 and send to requeest to server side 
+
+    
+    // axios
+    // .get(`http://localhost:4000/api/helpInput/`)
+    // .then(res => displayRes([res.data]))
 });
 
 
